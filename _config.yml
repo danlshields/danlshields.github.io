@@ -14,3 +14,7 @@ markdown: kramdown
 permalink: pretty
 include:
   - .well-known
+
+# Disqus settings
+category_ids:
+  drafts: 3200431
