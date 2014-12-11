@@ -1,0 +1,16 @@
+# Site settings
+title: Dan Shields
+email: me@danshields.me
+description: >
+  I am become code, creator of worlds.
+baseurl: ""
+url: "http://danshields.me"
+twitter_username: vedosity
+github_username:  vedosity
+keybase_username: vedosity
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+include:
+  - .well-known

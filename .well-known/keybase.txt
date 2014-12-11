@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/vedosity
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://danshields.me
+  * I am vedosity (https://keybase.io/vedosity) on keybase.
+  * I have a public key with fingerprint BDF2 B9D2 59DF 9D91 6B65  AA73 FDFA 1A51 8AE9 99C8
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "bdf2b9d259df9d916b65aa73fdfa1a518ae999c8",
+            "host": "keybase.io",
+            "key_id": "fdfa1a518ae999c8",
+            "uid": "c759273fd014ed495f2e21ec54d4fa00",
+            "username": "vedosity"
+        },
+        "revoke": {
+            "sig_ids": [
+                "f44ca0dd58cac03bb72ab51797e9ff28dccb1f43d35e90ee368bfb28f15f72a10f"
+            ]
+        },
+        "service": {
+            "hostname": "danshields.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1406789362,
+    "expire_in": 157680000,
+    "prev": "4f86b60f24e83313864a841e72f948d894534e68a4a99ae2b5fab402d0c6aac1",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.23
+Comment: https://keybase.io/crypto
+
+yMI2AnicbZJtSGRVGMdnspKmtyEoP5SxnVopG+y+nPtyZsOtXcreXggzezEu59xz
+zsz15d7x3juzzUxChbjWVmzsl4IsSALJAkPxS+VbEYZDhEpgMKayJKVLEoXRYuu5
+Yt86Xy7P8/yf3/+5D88319bEEnHv+8bdtebJxfjC7JP5WOvKL3+UAfFoEaTLoIsd
+fLjjZpif8x03BGlAKFcIooqGKEcUyTrRNYwNlVOOZazJJmYIIdsEKZD1gqhDYAgO
+WJPjiZwILIeK7P/o8wcF29CQEvEkGTIKkcYVpsjM1iCFHEtSJAyY7+IeJtQFRr3A
+CYugLwV8VvC6RLIMAicjXAKQfgFwCG0sUaqZNrYllRBDwUSTDWQwxLliUtsmMocq
+VTWGJMZU3SScKCaXNS6kssTBi4ItHAuOfQCPfuvQnWI3yDqsmwZNIk6BnO+Fnu11
+i1I2DHPpaKqwmIukpxixDiEWcVwqlioaCswPHM8FaVko7dCJqDKUdMNEqq6kAHsp
+5/jMciKFZuimJF5kwwoCCbkpti9xBTJTVWXV1CE2ocwMhSNoUhNBTYVMNzHECGGm
+EI1jAiWFSraOsS0L/4D1up5gy2JOnBFMsTkXh3mfgb65mY7LY/FE7MorLovuIpa4
+KvnftWzkai+Vk9f98+5zv7rjlWVyfuWzt6s1S08tfl59pHRvy/Mff/1a/4e9eODE
+xMhXM2PPOHVTd9702yc3vH9f9fifLRPHhxMVVv9p/9BKw/qatVt/xK9vjccfvHXn
+8brXW3qmfuoYsc43bGzPoeo7l6ZLb9yhFGu7H+1/c2n15uTy0Ua+fvuNzcOl3wfP
+5d5b8AYGv9tR9nhb6eXO5AdT/97VPv30xce2Kqv3HyWVL9XBH58IrtmcuaV2NJs8
+5f58dZv6bHPXunWyQztdmR8t9z08f+HsxS+a9k6fqbn7xLGxfOaH5MmxI2c3J/86
+90rn3uyZC9ffE2Qe2vh2/IHtgWMftf898aoVDvU2LN2Gt97aBy4iOYM=
+=vjbP
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vedosity
+
+==================================================================
