@@ -1,21 +1,18 @@
-{% assign rootFolder = page.path | split: '/' | first %}
-{% if rootFolder == '_drafts' %}
-  {% assign draft = true %}
-{% endif %}
+{% assign root_folder = page.path | split: '/' | first %}
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'vedosity';
-  {% if draft %}
+  {% if root_folder == '_drafts' %}
   var disqus_identifier = 'draft';
   var disqus_title = 'Draft';
   var disqus_url = 'http://www.example.org/';
-  var disqus_category_id = '{{ site.category_ids['drafts'] }}' || '0';
+  var disqus_category_id = '{{ site.category_ids['drafts'] }}';
   {% else %}
   var disqus_identifier = '{{ page.id }}';
   var disqus_title = '{{ page.title }}';
   var disqus_url = '{{ site.url | append: page.url }}';
-  var disqus_category_id = '{{ site.category_ids[page.category] }}' || '0';
+  var disqus_category_id = undefined;
   {% endif %}
 
   (function() {
