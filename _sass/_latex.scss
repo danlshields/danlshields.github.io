@@ -1,0 +1,32 @@
+/**
+ * Error formatting
+ */
+.latex-error {
+    color: #a00;
+    background-color: #fee;
+
+    &::before {
+        content: "LaTeX: ";
+    }
+}
+
+.js script[type^="math/tex"] {
+    display: inline-block;
+    font-size: 0;
+
+    margin: 0 4px;
+    width: $base-font-size * 120px / 30px;
+    height: $base-font-size;
+    vertical-align: middle;
+    background: url("/img/loading.svg") no-repeat top left;
+    background-size: $base-font-size * 120px / 30px $base-font-size;
+}
+
+.no-js script[type^="math/tex"] {
+    @extend code;
+    @extend .latex-error;
+
+    display: inline;
+    font-family: monospace;
+}
+

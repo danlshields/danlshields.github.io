@@ -1,0 +1,103 @@
+<script type="text/javascript">
+  (function() {
+    "use strict";
+
+    // Taken from https://github.com/filamentgroup/loadCSS
+    // Load a CSS stylesheet dynamically, insert before 'before' if it is defined.
+    function loadCSS(href, before, media){
+      var stylesheet = window.document.createElement("link");
+      var ref = before || window.document.getElementsByTagName("script")[0];
+      var sheets = window.document.styleSheets;
+
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = href;
+      stylesheet.media = "only x";
+      ref.parentNode.insertBefore(stylesheet, ref);
+
+      function toggleMedia() {
+        var defined;
+        for (var i = 0; i < sheets.length; i++) {
+          if (sheets[i].href && sheets[i].href.indexOf(href) > -1) {
+            defined = true;
+          }
+        }
+        if (defined) {
+          stylesheet.media = media || "all";
+        }
+        else {
+          setTimeout(toggleMedia);
+        }
+      }
+
+      toggleMedia();
+      return stylesheet;
+    }
+
+    // Load javascript from src, call cb when it loads.
+    function loadScript(src, cb) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = src;
+
+      var scriptLoaded = false;
+      script.onload = script.onreadystatechange = function() {
+        if (!scriptLoaded && (!this.readyState || this.readyState == 'complete')) {
+          scriptLoaded = true;
+          cb && cb();
+        }
+      };
+
+      var parent = document.getElementsByTagName('head')[0] ||
+                   document.getElementsByTagName('body')[0];
+      parent.appendChild(script);
+
+      return script;
+    }
+
+    // Render latex. Element must be a script element with type "math/tex".
+    // If the type contains "mode=display", the latex will be rendered with
+    // display mode.
+    function renderLatex(element) {
+      var latex = element.text;
+      // Katex doesn't support line comments, remove them
+      latex = latex.replace(/%.*$/gm, "");
+
+      var container;
+      if (element.type.indexOf("mode=display") != -1) {
+        container = document.createElement("p");
+        latex = "\\displaystyle {" + latex + "}";
+      }
+      else {
+        container = document.createElement("span");
+      }
+
+      try {
+        katex.render(latex, container);
+        element.parentNode.replaceChild(container, element);
+        return container;
+      }
+      catch (error) {
+        container = document.createElement("code");
+        container.className = "latex-error";
+        var textNode = document.createTextNode(element.text);
+        container.appendChild(textNode);
+        container.setAttribute("title", error.message);
+        element.parentNode.replaceChild(container, element);
+        return container;
+      }
+    }
+
+    // Render all latex from scripts that have the MIME type "math/tex".
+    function renderAllLatex() {
+      var matches = document.querySelectorAll('script[type^="math/tex"]');
+      for (var i = 0; i < matches.length; i++) {
+        renderLatex(matches[i]);
+      }
+    }
+
+    var script = loadScript('/katex/katex.min.js', renderAllLatex);
+    loadCSS('/katex/katex.min.css', script);
+  })();
+</script>
+<noscript>Please enable JavaScript for rendered LaTeX math.</noscript>
